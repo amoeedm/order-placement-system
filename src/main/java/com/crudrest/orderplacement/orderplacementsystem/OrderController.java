@@ -1,14 +1,14 @@
 package com.crudrest.orderplacement.orderplacementsystem;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class OrderController {
 
+    @Autowired
     private final OrderRepository repository;
 
     OrderController(OrderRepository repository){
@@ -16,12 +16,17 @@ public class OrderController {
     }
 
     @GetMapping("/orders")
-    List<Order> all(){
+    public List<Order> all(){
         return repository.findAll();
     }
 
     @PostMapping("/orders")
-    Order newOrder(@RequestBody Order newOrder){
+    public Order newOrder(@RequestBody Order newOrder){
         return repository.save(newOrder);
+    }
+
+    @DeleteMapping("/orders/{id}")
+    public @ResponseBody void deleteOrder(@PathVariable Long id) {
+        repository.deleteById(id);
     }
 }
