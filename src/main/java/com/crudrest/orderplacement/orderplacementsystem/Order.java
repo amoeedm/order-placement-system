@@ -49,5 +49,83 @@ public class Order {
     @Column(name = "order_note")
     private String orderNote;
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(Integer phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddressMovingFrom() {
+        return addressMovingFrom;
+    }
+
+    public void setAddressMovingFrom(String addressMovingFrom) {
+        this.addressMovingFrom = addressMovingFrom;
+    }
+
+    public String getAddressMovingTo() {
+        return addressMovingTo;
+    }
+
+    public void setAddressMovingTo(String addressMovingTo) {
+        this.addressMovingTo = addressMovingTo;
+    }
+
+    public Boolean getMoving() {
+        return moving;
+    }
+
+    public void setMoving(Boolean moving) {
+        this.moving = moving;
+    }
+
+    public Boolean getPacking() {
+        return packing;
+    }
+
+    public void setPacking(Boolean packing) {
+        this.packing = packing;
+    }
+
+    public Boolean getCleaning() {
+        return cleaning;
+    }
+
+    public void setCleaning(Boolean cleaning) {
+        this.cleaning = cleaning;
+    }
+
+    public Date getServiceDate() {
+        return serviceDate;
+    }
+
+    public void setServiceDate(Date serviceDate) {
+        this.serviceDate = serviceDate;
+    }
+
+    public String getOrderNote() {
+        return orderNote;
+    }
+
+    public void setOrderNote(String orderNote) {
+        this.orderNote = orderNote;
+    }
 }
