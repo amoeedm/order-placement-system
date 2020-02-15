@@ -1,9 +1,9 @@
 package com.crudrest.orderplacement.orderplacementsystem;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class OrderController {
@@ -18,6 +18,11 @@ public class OrderController {
     @GetMapping("/orders")
     public List<Order> all(){
         return repository.findAll();
+    }
+
+    @GetMapping("/orders/{id}")
+    public Optional<Order> findAnOrder(@PathVariable Long id){
+        return repository.findById(id);
     }
 
     @PostMapping("/orders")
