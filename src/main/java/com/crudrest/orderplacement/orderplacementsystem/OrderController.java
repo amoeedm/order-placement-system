@@ -16,6 +16,7 @@ public class OrderController {
     }
 
     @GetMapping("/orders")
+    @CrossOrigin(origins = "http://localhost:3000")
     public List<Order> all(){
         return repository.findAll();
     }
