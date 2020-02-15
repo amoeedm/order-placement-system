@@ -5,17 +5,30 @@ class App extends Component {
     constructor(props){
     super(props);
     this.state = {
-        id: [],
+        id: null,
         };
     }
 
     componentDidMount(){
-    fetch('https://localhost:8080/orders')
-        .then(({ results }) => this.setState({ id: results }));
+    fetch('http://localhost:8080/orders')
+        .then(res => {
+            const data = res.json();
+            this.setState({
+                id: data
+            });
+            console.log(this.state.id);
+        }).catch(err => {
+            console.log("Error.");
+        });
     }
 
     render(){
-        return <div> {this.state.id} </div>;
+     if(this.state.id == null) {
+        return <div>Loading...</div>;
+     }
+     return (
+        <div> {this.state.id} </div>
+        );
     }
 
 }
