@@ -21,7 +21,7 @@ public class Order {
     private String name;
 
     @Column(name = "customer_phone")
-    //@Size(min = 8, max = 12)
+    @Size(min = 8, max = 12)
     private Integer phoneNumber;
 
     @Column(name = "customer_email")
@@ -42,12 +42,19 @@ public class Order {
     @Column(name = "cleaning")
     private Boolean cleaning;
 
-    //@JsonFormat(pattern="dd-MM-yyyy")
     @Column(name = "service_date")
     private Date serviceDate;
 
     @Column(name = "order_note")
     private String orderNote;
+
+    /*
+    Getters and setters below.
+     */
+
+    public Long getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
