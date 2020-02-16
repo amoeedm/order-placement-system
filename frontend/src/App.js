@@ -6,16 +6,6 @@ class App extends Component {
     super(props);
     this.state = {
         id: '',
-        name: '',
-        phoneNumber: 0,
-        email: '',
-        addressMovingTo: '',
-        addressMovingFrom: '',
-        moving: false,
-        packing: false,
-        cleaning: false,
-        serviceDate: '1900-01-01',
-        orderNote: ''
         };
     }
 
