@@ -1,12 +1,17 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
+import {deleteOrder, newOrder, editOrder} from '../components/click.js';
 
  const Orders = ({ orders }) => {
+
+
+
       return (
         <div>
-          <center><h3>ACME Moving Company</h3></center>
           <p></p>
-          <Button variant="primary">New Order</Button>
+          <center><h3>Order Management System</h3></center>
+          <p></p>
+          <Button variant="primary" onClick={newOrder}>New Order</Button>
           <p></p>
           <hr></hr>
             <table cellpadding="10">
@@ -38,8 +43,8 @@ import {Button} from 'react-bootstrap';
               <td><p className="order-moving">{order.moving.toString()}</p></td>
               <td><p className="order-cleaning">{order.cleaning.toString()}</p></td>
               <td><p className="order-note">{order.orderNote}</p></td>
-              <td><Button variant="warning">Edit Order</Button></td>
-              <td><Button variant="danger">Delete Order</Button></td>
+              <td><Button variant="warning" onClick={editOrder}>Edit Order</Button></td>
+              <td><Button variant="danger" onClick={deleteOrder}>Delete Order</Button></td>
               </tr>
           ))}
         </table>
@@ -48,4 +53,4 @@ import {Button} from 'react-bootstrap';
       )
     };
 
-    export default Orders
+    export default Orders;
