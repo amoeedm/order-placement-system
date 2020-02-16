@@ -27,5 +27,4 @@ class OrderControllerTest {
         Assert.assertEquals(200, result.getStatusCodeValue());
         Assert.assertEquals(true, result.getBody().contains("id"));
     }
-
 }

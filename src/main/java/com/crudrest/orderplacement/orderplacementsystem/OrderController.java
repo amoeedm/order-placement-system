@@ -1,7 +1,10 @@
 package com.crudrest.orderplacement.orderplacementsystem;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,18 +26,32 @@ public class OrderController {
 
     @GetMapping("/orders/{id}")
     public Optional<Order> findAnOrder(@PathVariable Long id){
-        return repository.findById(id);
+        Optional<Order> order = repository.findById(id);
+        if(order.isPresent()){
+            return order;
+        }
+        else {
+            throw new RuntimeException("Order not found, id: " + id);
+        }
     }
 
 
     @PostMapping("/orders")
+    @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     public Order newOrder(@RequestBody Order newOrder){
-        return repository.save(newOrder);
+            return repository.save(newOrder);
     }
 
     @DeleteMapping("/orders/{id}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public @ResponseBody void deleteOrder(@PathVariable Long id) {
-        repository.deleteById(id);
+        Optional<Order> order = repository.findById(id);
+        if(order.isPresent()){
+            repository.deleteById(id);
+        }
+        else {
+            throw new RuntimeException("Order not found, id: " + id);
+        }
     }
 
     @PutMapping("/orders/{id}")
