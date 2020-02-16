@@ -1,35 +1,26 @@
 import React, {Component} from 'react';
+import Orders from './components/orders';
 
 class App extends Component {
 
-    constructor(props){
-    super(props);
-    this.state = {
-        id: '',
-        };
+    state = {
+        orders: []
     }
 
-    componentDidMount(){
-    fetch('http://localhost:8080/orders')
-        .then(res => {
-            const data = res.json();
-            console.log(data);
-            this.setState({
-                id: data
-            });
-        }).catch(err => {
-            console.log("Error.");
-        });
+    componentDidMount() {
+        fetch('http://localhost:8080/orders')
+        .then(res => res.json())
+        .then((data) => {
+          this.setState({ orders: data })
+        })
+        .catch(console.log)
     }
 
-    render(){
-     if (this.state.length == 0) {
-        return <div>Loading...</div>;
-     }
-     return (
-        <div>Test:</div>
-      );
+    render () {
+        return (
+          <Orders orders={this.state.orders} />
+        );
+      }
     }
-}
 
-export default App;
+    export default App;
