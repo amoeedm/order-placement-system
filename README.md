@@ -79,7 +79,7 @@ The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is c
 
 #### PUT
 
-<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/put.gif">
+<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/put.gif"><br/><br/>
 
 
 ## Workflow
@@ -102,7 +102,7 @@ For detailed commits, see <a href="https://github.com/amoeedm/order-placement-sy
 14. Tried to bundle with Webpack.
 15. Created and written README.md.
 
-Basic idea has been to break problems down to smaller problems, make a functioning implementation, then adding all functions and continuing to next small problem.
+Basic idea has been to break problems down to smaller problems, make a functioning implementation, then adding all functions and continuing to next small problem.<br/><br/>
 
 
 ## Future improvements
