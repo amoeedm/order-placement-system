@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import {deleteOrder, newOrder, editOrder} from '../components/click.js';
+
 import '../components/orders.css';
 
  const Orders = ({ orders }) => {

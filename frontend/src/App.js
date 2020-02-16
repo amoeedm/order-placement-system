@@ -18,7 +18,7 @@ class App extends Component {
 
     render () {
         return (
-          <Orders orders={this.state.orders} />
+            <Orders orders={this.state.orders} />
         );
       }
     }
