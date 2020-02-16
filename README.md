@@ -104,6 +104,14 @@ For detailed commits, see <a href="https://github.com/amoeedm/order-placement-sy
 
 Basic idea has been to break problems down to smaller problems, make a functioning implementation, then adding all functions and continuing to next small problem.
 
-## Limitations
 
 ## Future improvements
+
+* **Frontend:** make POST, PUT and GET (param: {id}) functioning.
+* **Security:** add authentication for different sales consultants.
+* **Search:** add search function.
+* **Sort:** add sort function for each column.
+* **Add owner column:** each order is owned by a sales consultant.
+* **Database design:** restrict variables to more constraint values (ex. emails must contain @; phone numbers must be at least 8 digits etc.)
+* **Tests:** more JUnit tests of methods and REST-tests.
+* **Documentation:** add more comments in code.
