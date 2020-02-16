@@ -34,9 +34,9 @@ import {Button} from 'react-bootstrap';
               <td><p className="order-email">{order.email}</p></td>
               <td><p className="order-address-from">{order.addressMovingFrom}</p></td>
               <td><p className="order-address-to">{order.addressMovingTo}</p></td>
-              <td><p className="order-packing">{order.packing}</p></td>
-              <td><p className="order-moving">{order.moving}</p></td>
-              <td><p className="order-cleaning">{order.cleaning}</p></td>
+              <td><p className="order-packing">{order.packing.toString()}</p></td>
+              <td><p className="order-moving">{order.moving.toString()}</p></td>
+              <td><p className="order-cleaning">{order.cleaning.toString()}</p></td>
               <td><p className="order-note">{order.orderNote}</p></td>
               <td><Button variant="warning">Edit Order</Button></td>
               <td><Button variant="danger">Delete Order</Button></td>
