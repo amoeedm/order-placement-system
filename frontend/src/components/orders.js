@@ -4,6 +4,7 @@ import React from 'react'
       return (
         <div>
           <center><h1>Order List</h1></center>
+          <button>New Order</button>
           {orders.map((order) => (
           <div className="order">
             <div className="order-body">
@@ -17,6 +18,8 @@ import React from 'react'
               <p className="order-packing">Packing: {order.packing}</p>
               <p className="order-moving">Moving: {order.moving}</p>
               <p className="order-cleaning">Cleaning: {order.cleaning}</p>
+              <button>Delete Order</button>
+              <button>Edit Order</button>
             </div>
           </div>
           ))}
