@@ -12,7 +12,7 @@ import {Button} from 'react-bootstrap';
             <table cellpadding="10">
             <tr>
               <td><h6>Order Id</h6></td>
-              <td><h6>Service Date</h6></td>
+              <td><h6>Date and Time</h6></td>
               <td><h6>Customer Name</h6></td>
               <td><h6>Phone</h6></td>
               <td><h6>Email</h6></td>
@@ -43,6 +43,7 @@ import {Button} from 'react-bootstrap';
               </tr>
           ))}
         </table>
+        <hr></hr>
         </div>
       )
     };

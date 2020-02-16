@@ -21,7 +21,6 @@ public class Order {
     private String name;
 
     @Column(name = "customer_phone")
-    @Size(min = 8, max = 12)
     private Integer phoneNumber;
 
     @Column(name = "customer_email")
