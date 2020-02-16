@@ -6,6 +6,8 @@ CRUD (create, read, update, delete) Web application for managing moving orders.
 
 **Backend:** Java, Spring Boot, JPA, MySQL.<br/>
 **Frontend:** React.js
+
+<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/main_image.PNG">
 <br/><br/>
 
 ### Installation
