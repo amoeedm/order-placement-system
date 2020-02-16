@@ -65,7 +65,7 @@ The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is c
 
 #### DELETE
 
-<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/deleteFE.gif">
+<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/deletefrontend.gif">
 <img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/delete.gif">
 
 
