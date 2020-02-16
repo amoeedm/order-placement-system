@@ -42,7 +42,7 @@ import '../components/orders.css';
               <td><p className="order-cleaning">{order.cleaning.toString()}</p></td>
               <td><p className="order-note">{order.orderNote}</p></td>
               <td><Button variant="warning" onClick={editOrder}>Edit Order</Button></td>
-              <td><Button variant="danger" onClick={deleteOrder}>Delete Order</Button></td>
+              <td><Button variant="danger" onClick={() => deleteOrder(order.id)}>Delete Order</Button></td>
               </tr>
           ))}
         </table>

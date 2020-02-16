@@ -1,8 +1,10 @@
 import React from 'react';
 
-export const deleteOrder = () =>{
-    console.log("Delete");
-    alert("Delete");
+export const deleteOrder = (id) =>{
+    fetch('http://localhost:8080/orders/' + id, {
+        method: 'DELETE'
+    });
+    window.location.reload();
 };
 
 export const editOrder = () =>{
