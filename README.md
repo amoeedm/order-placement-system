@@ -84,6 +84,26 @@ The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is c
 
 ## Workflow
 
+For detailed commits, see <a href="https://github.com/amoeedm/order-placement-system/commits/master">this</a>. The workflow has roughly followed:
+
+1. Design @Entity with minimal attributes.
+2. Design basic @RestController with @PostMapping and @GetMapping.
+3. Connecting MySQL database through JPA.
+4. Verifying succssful POST and GET with Postman.
+5. Design remaining @RestControllers such as @DeleteMapping and @PutMapping.
+6. Verifying successful DELETE and POST with Postman.
+7. Basic JUnit test and @SpringBootTest.
+8. Modifying @RestControllers to be more robust.
+9. Fetching data in React.js.
+10. Adding frontend components without functions.
+11. Adding generic actions based upon events such as onClick.
+12. Made DELETE functioning through frontend.
+13. Tried to make POST and PUT functioning through frontend.
+14. Tried to bundle with Webpack.
+15. Created and written README.md.
+
+Basic idea has been to break problems down to smaller problems, make a functioning implementation, then adding all functions and continuing to next small problem.
+
 ## Limitations
 
 ## Future improvements
