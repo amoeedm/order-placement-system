@@ -1,0 +1,11 @@
+#left {
+  float:left;
+  width:400px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#right {
+  width: 99%;
+  text-align: right;
+}

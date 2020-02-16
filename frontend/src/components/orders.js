@@ -1,17 +1,15 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import {deleteOrder, newOrder, editOrder} from '../components/click.js';
+import '../components/orders.css';
 
  const Orders = ({ orders }) => {
-
-
 
       return (
         <div>
           <p></p>
-          <center><h3>Order Management System</h3></center>
-          <p></p>
-          <Button variant="primary" onClick={newOrder}>New Order</Button>
+          <div id="left">  Order Management System</div>
+          <div id="right"><Button variant="primary" onClick={newOrder}>New Order</Button></div>
           <p></p>
           <hr></hr>
             <table cellpadding="10">
