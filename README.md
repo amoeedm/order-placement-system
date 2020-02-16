@@ -63,6 +63,14 @@ The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is c
 
 ## Demonstrations
 
+#### GET
+
+<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/get.gif">
+
+#### DELETE
+
+<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/delete.gif">
+
 #### POST
 
 <img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/post.gif">
@@ -71,13 +79,6 @@ The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is c
 
 <img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/put.gif">
 
-#### GET
-
-<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/get.gif">
-
-#### DELETE
-
-<img src="https://raw.githubusercontent.com/amoeedm/order-placement-system/master/img/delete.gif">
 
 ## Workflow
 
