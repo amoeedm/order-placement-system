@@ -8,7 +8,6 @@ CRUD (create, read, update, delete) Web application for managing moving orders.
 **Frontend:** React.js
 <br/><br/>
 
-
 ### Installation
 
 1. Download or clone current repository.
@@ -16,8 +15,21 @@ CRUD (create, read, update, delete) Web application for managing moving orders.
 3. API Service availablle at `localhost:8080/orders`
 4. Within folder `\frontend`, run `npm start` (you may have to install additional packages).
 5. Access frontend at `localhost:3000`
+<br/><br/>
 
-## Architecture
+### Architecture
+
+#### Database design
+
+Database initiated locally on MySQL Server with the following commands:
+```sql
+CREATE DATABASE orders;
+CREATE USER 'admin'@'%' IDENTIFIED BY 'password';
+GRANT ALL ON orders.* TO 'admin'@'%';
+```
+The user is adviced to use more secure username then `admin` and password as `password`. Corresponding changes must be applied to `application.properties` within the folder `.\src\main\resources\`.
+
+
 
 ## Demonstrations
 
