@@ -28,7 +28,34 @@ CREATE DATABASE orders;
 CREATE USER 'admin'@'%' IDENTIFIED BY 'password';
 GRANT ALL ON orders.* TO 'admin'@'%';
 ```
-The user is adviced to use more secure username then `admin` and password as `password`. Corresponding changes must be applied to `application.properties` within the folder `.\src\main\resources\`.
+The user is adviced to use more secure username then `admin` and password as `password`. Corresponding changes must be applied to `application.properties` within the folder `.\src\main\resources\`. 
+
+The database consists of one table represented by the class `Order`. The attributes are:
+
+| Attribute  |  Type  | 
+|---|---|
+| id  | Long (primary key)  |
+| name  | String  |
+|  email |  String |
+|  addressMovingTo |  String |
+|  addressMovingFrom |  String |
+|  moving |  boolean |
+|  packing |  boolean |
+|  cleaning |  boolean |
+|  orderNote |  String |
+
+The primary key `id` is auto-generated. Few constraints on the attributes are enforced.
+
+#### API design
+
+The available HTTP REST mappings are:
+* `GET: /orders` - returns all entities in the database in JSON-format.
+* `GET: /orders/{id}` - returns entity with given id in the database in JSON-format, if entity exists.
+* `POST: /orders` - creates entity with given parameters in the database.
+* `DELETE: /orders/{id}` - removes entity with given id in the database, if entity exists.
+* `PUT: /orders/{id}` - updates entity with given id in the database in JSON-format, if entity exists.
+
+Some of the REST methods throw exceptions whenever used improperly and a basic controller test is available in `OrderControllerTest.java` in the folder `\src\test`. Postman were also used to test all REST mappings.
 
 
 
