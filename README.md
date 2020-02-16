@@ -57,7 +57,9 @@ The available HTTP REST mappings are:
 
 Some of the REST methods throw exceptions whenever used improperly and a basic controller test is available in `OrderControllerTest.java` in the folder `\src\test`. Postman were also used to test all REST mappings.
 
+#### Frontend design
 
+The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is currently connected to the component `Orders` found in `.\frontend\src\orders.js`. The idea is that the landing page fetches all registered entities in the database and renders them in a tabular manner according to `orders.js`. The action events are handled by buttons and their `onClick`-events are found in `click.js`. Currently, only the Delete-buttion is functioning.
 
 ## Demonstrations
 
