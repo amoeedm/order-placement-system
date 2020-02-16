@@ -45,7 +45,7 @@ The database consists of one table represented by the class `Order`. The attribu
 |  orderNote |  String |
 
 The primary key `id` is auto-generated. Few constraints on the attributes are enforced.
-
+<br/>
 #### API design
 
 The available HTTP REST mappings are:
@@ -56,7 +56,7 @@ The available HTTP REST mappings are:
 * `PUT: /orders/{id}` - updates entity with given id in the database in JSON-format, if entity exists.
 
 Some of the REST methods throw exceptions whenever used improperly and a basic controller test is available in `OrderControllerTest.java` in the folder `\src\test`. Postman were also used to test all REST mappings.
-
+<br/>
 #### Frontend design
 
 The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is currently connected to the component `Orders` found in `.\frontend\src\orders.js`. The idea is that the landing page fetches all registered entities in the database and renders them in a tabular manner according to `orders.js`. The action events are handled by buttons and their `onClick`-events are found in `click.js`. Currently, only the Delete-buttion is functioning.
