@@ -28,7 +28,7 @@ CREATE DATABASE orders;
 CREATE USER 'admin'@'%' IDENTIFIED BY 'password';
 GRANT ALL ON orders.* TO 'admin'@'%';
 ```
-The user is adviced to use more secure username then `admin` and password as `password`. Corresponding changes must be applied to `application.properties` within the folder `.\src\main\resources\`. 
+The user is adviced to use more secure username and password then above. Corresponding changes must be applied to `application.properties` within the folder `.\src\main\resources\`. 
 
 The database consists of one table represented by the class `Order`. The attributes are:
 
@@ -57,9 +57,10 @@ The available HTTP REST mappings are:
 
 Some of the REST methods throw exceptions whenever used improperly and a basic controller test is available in `OrderControllerTest.java` in the folder `\src\test`. Postman were also used to test all REST mappings.
 <br/>
+
 #### Frontend design
 
-The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is currently connected to the component `Orders` found in `.\frontend\src\orders.js`. The idea is that the landing page fetches all registered entities in the database and renders them in a tabular manner according to `orders.js`. The action events are handled by buttons and their `onClick`-events are found in `click.js`. Currently, only the Delete-buttion is functioning.<br/><br/>
+React App found in the folder `.\frontend\src`. The main JavaScript-file is `App.js` and is connected to the component `Orders` found in `.\frontend\src\orders.js`. The landing page fetches all registered entities in the database and renders them in a tabular manner according to `orders.js`. Action events are handled by buttons and their `onClick`-events are found in `click.js`. Currently, only the Delete-buttion is functioning.<br/><br/>
 
 ## Demonstrations
 
@@ -86,32 +87,31 @@ The main JavaScript-file is `App.js` within the folder `.\frontend\src` and is c
 
 For detailed commits, see <a href="https://github.com/amoeedm/order-placement-system/commits/master">this</a>. The workflow has roughly followed:
 
-1. Design @Entity with minimal attributes.
-2. Design basic @RestController with @PostMapping and @GetMapping.
-3. Connecting MySQL database through JPA.
-4. Verifying succssful POST and GET with Postman.
-5. Design remaining @RestControllers such as @DeleteMapping and @PutMapping.
-6. Verifying successful DELETE and POST with Postman.
-7. Basic JUnit test and @SpringBootTest.
-8. Modifying @RestControllers to be more robust.
-9. Fetching data in React.js.
-10. Adding frontend components without functions.
-11. Adding generic actions based upon events such as onClick.
-12. Made DELETE functioning through frontend.
-13. Tried to make POST and PUT functioning through frontend.
-14. Tried to bundle with Webpack.
-15. Created and written README.md.
+1. **[Database]** Design @Entity with minimal attributes.
+2. **[API Service]** Design basic @RestController with @PostMapping and @GetMapping.
+3. **[Database]** Connecting MySQL database through JPA.
+4. **[API Service]** Verifying succssful POST and GET with Postman.
+5. **[API Service]** Design remaining @RestControllers such as @DeleteMapping and @PutMapping.
+6. **[API Service]** Verifying successful DELETE and POST with Postman.
+7. **[Testing]** Basic JUnit test and @SpringBootTest.
+8. **[API Service]** Modifying @RestControllers to be more robust.
+9. **[Frontend]** Fetching data in React.js.
+10. **[Frontend]** Adding frontend components without functions.
+11. **[Frontend]** Adding generic actions based upon events such as onClick.
+12. **[Frontend]** Made DELETE functioning through frontend.
+13. **[Frontend]** Tried to make POST and PUT functioning through frontend.
+14. **[Deploy]** Tried to bundle with Webpack.
+15. **[Documentation]** Created and written README.md and comments.
 
-Basic idea has been to break problems down to smaller problems, make a functioning implementation, then adding all functions and continuing to next small problem.<br/><br/>
+<br/><br/>
 
 
 ## Future improvements
 
 * **Frontend:** make POST, PUT and GET (param: {id}) functioning.
+* **Search:** add search function for search by {id}.
 * **Security:** add authentication for different sales consultants.
-* **Search:** add search function.
 * **Sort:** add sort function for each column.
 * **Add owner column:** each order is owned by a sales consultant.
 * **Database design:** restrict variables to more constraint values (ex. emails must contain @; phone numbers must be at least 8 digits etc.)
 * **Tests:** more JUnit tests of methods and REST-tests.
-* **Documentation:** add more comments in code.
