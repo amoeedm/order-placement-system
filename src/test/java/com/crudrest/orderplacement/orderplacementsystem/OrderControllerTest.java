@@ -17,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class OrderControllerTest {
 
+    //HTTP test for asserting that an object is created and stored in the database.
     @Test
     public void testGetOrderListSuccess() throws Exception {
 
