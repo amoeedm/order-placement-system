@@ -11,6 +11,7 @@ import java.util.Optional;
 @RestController
 public class OrderController {
 
+    //Not making set-method.
     @Autowired
     private final OrderRepository repository;
 
@@ -18,12 +19,14 @@ public class OrderController {
         this.repository = repository;
     }
 
+    //GET: all
     @GetMapping("/orders")
     @CrossOrigin(origins = "http://localhost:3000")
     public List<Order> all(){
         return repository.findAll();
     }
 
+    //GET: by {id}; checks if exists first.
     @GetMapping("/orders/{id}")
     public Optional<Order> findAnOrder(@PathVariable Long id){
         Optional<Order> order = repository.findById(id);
@@ -35,13 +38,14 @@ public class OrderController {
         }
     }
 
-
+    //POST
     @PostMapping("/orders")
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     public Order newOrder(@RequestBody Order newOrder){
             return repository.save(newOrder);
     }
 
+    //DELETE: by {id}; checks if exists first.
     @DeleteMapping("/orders/{id}")
     @CrossOrigin(origins = "http://localhost:3000")
     public @ResponseBody void deleteOrder(@PathVariable Long id) {
@@ -54,6 +58,7 @@ public class OrderController {
         }
     }
 
+    //PUT: by {id}; updates each old attribute entry with new entries.A
     @PutMapping("/orders/{id}")
     public @ResponseBody Order changeOrder(@PathVariable Long id, @RequestBody Order updateOrder) {
         Order currentOrder = repository.findById(id).orElse(null);
