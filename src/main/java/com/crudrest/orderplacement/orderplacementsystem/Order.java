@@ -7,6 +7,10 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+/*
+Entity class for the single table in the database.
+*/
+
 @Entity
 @Table(name="orders")
 
